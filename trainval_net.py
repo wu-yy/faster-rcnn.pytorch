@@ -288,6 +288,7 @@ if __name__ == '__main__':
 
   if args.mGPUs:
     fasterRCNN = nn.DataParallel(fasterRCNN)
+    # optimizer = nn.DataParallel(optimizer)
 
   iters_per_epoch = int(train_size / args.batch_size)
 
